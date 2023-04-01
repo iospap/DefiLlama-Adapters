@@ -47,11 +47,13 @@ async function tvl(chain, block) {
 const chains = [
   'ethereum',
   'arbitrum',
+  'polygon',
 ]
 
 module.exports = {
   doublecounted: true,
   hallmarks: [
+    [1640164144, "cvxFXS Launched"],
     [1651881600, "UST depeg"]
   ]
 };
