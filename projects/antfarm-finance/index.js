@@ -11,6 +11,7 @@ const ethereum_staking = "0x6142b36B3dD1812993C2ecaa300b962A7Da0A900";
 
 module.exports = {
   misrepresentedTokens: true,
+  doublecounted: true,
 };
 
 Object.keys(config).forEach((chain) => {
@@ -20,7 +21,7 @@ Object.keys(config).forEach((chain) => {
       tvl: getUniTVL({
         factory,
         useDefaultCoreAssets: true,
-        fetchBalances: true,
+        
       }),
       staking: staking(
         "0x6142b36B3dD1812993C2ecaa300b962A7Da0A900",
@@ -33,7 +34,7 @@ Object.keys(config).forEach((chain) => {
       tvl: getUniTVL({
         factory,
         useDefaultCoreAssets: true,
-        fetchBalances: true,
+        
       }),
     };
   }
