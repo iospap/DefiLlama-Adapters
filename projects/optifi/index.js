@@ -64,6 +64,8 @@ module.exports = {
     tvl: () => ({}),
   },
   hallmarks: [
-    [Math.floor(new Date('2022-08-30')/1e3), 'OptiFi mainnet program was closed by mistake'],
+    ['2022-08-30', 'OptiFi mainnet program was closed by mistake'],
   ],
 };
+
+module.exports.deadFrom = '2022-09-02'

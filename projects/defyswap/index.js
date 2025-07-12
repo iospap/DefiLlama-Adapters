@@ -9,16 +9,16 @@ const dfy = "0x84b0b7718f8480a9eda3133fd385d7edf2b1d1c4";
 const whitelist = [
   dfy,
   ADDRESSES.fantom.USDC,
-  "0x321162cd933e2be498cd2267a90534a804051b11",
+  ADDRESSES.fantom.WBTC,
 ];
 
 module.exports = {
   misrepresentedTokens: true,
   echelon: {
-    tvl: getUniTVL({ chain: 'echelon', useDefaultCoreAssets: true, factory: '0xdBE4CC36D0C19858d8cc7c5030593E9922aC680D' })
+    tvl: () => ({}),
   },
   fantom: {
-    tvl: getUniTVL({ factory, chain: 'fantom', useDefaultCoreAssets: true }),
+    tvl: getUniTVL({ factory, useDefaultCoreAssets: true }),
     staking: stakingUnknownPricedLP(
       masterchef,
       dfy,

@@ -4,6 +4,8 @@ module.exports = {
   timetravel: false,
   solana: { tvl: () => 0, },
   hallmarks: [
-    [Math.floor(new Date('2023-02-01')/1e3), 'Product is winding down'],
+    ['2023-02-01', 'Product is winding down'],
   ],
 }
+
+module.exports.deadFrom = '2023-02-01'

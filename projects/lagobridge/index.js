@@ -8,9 +8,9 @@ const wbtc = ADDRESSES.ethereum.WBTC
 module.exports = {
   methodology: "Tracks funds locked in the Lago Bridge contract on Ethereum",
   ethereum: {
-    tvl: sumTokensExport({ owner: bridgecontract, tokens: [usdc, wbtc,] })
+    tvl: sumTokensExport({ owner: bridgecontract, tokens: [usdc, wbtc,], logCalls: true })
   },
   hallmarks: [
-    [Math.floor(new Date('2022-12-23') / 1e3), 'Project is winding down'],
+    ['2022-12-23', 'Project is winding down'],
   ],
 };
